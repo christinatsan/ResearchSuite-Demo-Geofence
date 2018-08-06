@@ -1,0 +1,59 @@
+{
+  "name": "ResearchSuiteAppFramework",
+  "version": "0.0.3",
+  "summary": "The ResearchSuiteAppFramework is the easiest way to build mobile health research studies.",
+  "description": "The ResearchSuiteAppFramework is the easiest way to build mobile health research studies.\nNOTE: VERY EXPERIMENTAL!!",
+  "homepage": "https://github.com/ResearchSuite/ResearchSuiteAppFramework-iOS",
+  "license": {
+    "type": "Apache 2",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "James Kizer, Curiosity Health": "james at curiosityhealth dot com"
+  },
+  "source": {
+    "git": "https://github.com/ResearchSuite/ResearchSuiteAppFramework-iOS",
+    "tag": "0.0.3"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Source/Core/**/*",
+      "dependencies": {
+        "ResearchKit": [
+          "~> 1.5"
+        ],
+        "ReSwift": [
+          "~> 3.0"
+        ],
+        "ResearchSuiteTaskBuilder": [
+          "~> 0.10"
+        ],
+        "ResearchSuiteResultsProcessor": [
+          "~> 0.9"
+        ],
+        "Gloss": [
+          "~> 2.0"
+        ]
+      }
+    },
+    {
+      "name": "Lab",
+      "source_files": "Source/Lab/Classes/*",
+      "resource_bundles": {
+        "LabResources": [
+          "Source/Lab/Storyboards/*.storyboard"
+        ]
+      },
+      "dependencies": {
+        "ResearchSuiteAppFramework/Core": [
+
+        ]
+      }
+    }
+  ]
+}

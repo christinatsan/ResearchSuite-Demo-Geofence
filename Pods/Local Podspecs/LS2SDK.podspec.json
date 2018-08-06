@@ -1,0 +1,80 @@
+{
+  "name": "LS2SDK",
+  "version": "0.5.1",
+  "summary": "A short description of LS2SDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jdkizer9/LS2SDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jdkizer9": "jdkizer9@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/jdkizer9/LS2SDK.git",
+    "tag": "0.5.1"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Source/Core/**/*",
+      "dependencies": {
+        "OMHClient": [
+          "~> 0.3"
+        ],
+        "SecureQueue": [
+
+        ],
+        "Alamofire": [
+          "~> 4"
+        ]
+      }
+    },
+    {
+      "name": "RKSupport",
+      "source_files": "Source/RKSupport/**/*",
+      "dependencies": {
+        "LS2SDK/Core": [
+
+        ],
+        "ResearchKit": [
+          "~> 1.5"
+        ],
+        "ResearchSuiteExtensions": [
+          "~> 0.7"
+        ]
+      }
+    },
+    {
+      "name": "RSTBSupport",
+      "source_files": "Source/RSTBSupport/**/*",
+      "dependencies": {
+        "LS2SDK/Core": [
+
+        ],
+        "LS2SDK/RKSupport": [
+
+        ],
+        "ResearchSuiteTaskBuilder": [
+
+        ]
+      }
+    },
+    {
+      "name": "RSRPSupport",
+      "source_files": "Source/RSRPSupport/**/*",
+      "dependencies": {
+        "LS2SDK/Core": [
+
+        ],
+        "ResearchSuiteResultsProcessor": [
+          "~> 0.8"
+        ]
+      }
+    }
+  ]
+}

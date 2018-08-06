@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T3m-4S-OA0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="CXH-BO-Ulj">
+            <objects>
+                <viewController id="T3m-4S-OA0" customClass="WelcomeViewController" customModule="YADL_Reference_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGU-go-mOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuf-vW-4ZF">
+                                <rect key="frame" x="134" y="312" width="106" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="fvE-id-rHe"/>
+                                    <constraint firstAttribute="height" constant="43" id="spm-2p-sic"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startClicked:" destination="T3m-4S-OA0" eventType="touchUpInside" id="6tx-tX-nEd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Hi! 👋👋 Welcome to ResearchSuite" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbv-db-WI7">
+                                <rect key="frame" x="101" y="147" width="173" height="59"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="6Mt-P2-d5M"/>
+                                    <constraint firstAttribute="width" constant="150" id="H1x-cj-C5G"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cuf-vW-4ZF" firstAttribute="centerY" secondItem="aGU-go-mOQ" secondAttribute="centerY" id="Ude-dO-EWh"/>
+                            <constraint firstItem="Cuf-vW-4ZF" firstAttribute="top" secondItem="kbv-db-WI7" secondAttribute="bottom" constant="105" id="YyX-cF-hkN"/>
+                            <constraint firstItem="Cuf-vW-4ZF" firstAttribute="centerX" secondItem="aGU-go-mOQ" secondAttribute="centerX" id="h9Z-XN-u3R"/>
+                            <constraint firstItem="kbv-db-WI7" firstAttribute="centerX" secondItem="aGU-go-mOQ" secondAttribute="centerX" id="yem-aS-OP8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="94s-qU-nFJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="Cuf-vW-4ZF" id="b3l-fx-JGM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAi-uN-bmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.19999999999999" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+</document>

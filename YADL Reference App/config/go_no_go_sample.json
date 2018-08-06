@@ -1,0 +1,76 @@
+{
+    "type": "recurring",
+    "identifier": "yadl_full",
+    "title": "YADL Full Intake Survey",
+    "guid": "yadl_full-1",
+    "activity": {
+        "type": "elementList",
+        "identifier": "go_no_go_practice_full_intro",
+        "elements": [
+            {
+                "identifier": "introduction_1_gng_p",
+                "type": "instruction",
+                "title": "Welcome to the Square Game",
+                "text": "This game measures how quickly you can make a simple decision, and then either react or withhold your response."
+            },
+            {
+                "identifier": "introduction_2_gng_p",
+                "type": "instruction",
+                "title": "",
+                "text": "You will first be presented with a rectangle."
+            },
+            {
+                "identifier": "introduction_3_gng_p",
+                "type": "instruction",
+                "title": "",
+                "text": "If the rectangle turns GREEN, tap the screen as quickly as possible."
+            },
+            {
+                "identifier": "introduction_4_gng_p",
+                "type": "instruction",
+                "title": "",
+                "text": "If the rectangle turns BLUE, do not tap."
+            },
+            {
+                "identifier": "introduction_5_gng_p",
+                "type": "instruction",
+                "title": "",
+                "text": "Between each rectangle you will see a plus (+) sign."
+            },
+            {
+                "type": "CTFGoNoGoActiveStep",
+                "identifier": "go_no_go_practice",
+                "parameters": {
+                    "numberOfTrials": 6,
+                    "waitTime": 0.5,
+                    "crossTime": 0.5,
+                    "blankTime": 0.5,
+                    "cueTimes": [
+                        0.5
+                    ],
+                    "fillTime": 1.0,
+                    "goCueProbability": 0.5,
+                    "goCueTargetProbability": 0.7,
+                    "noGoCueTargetProbability": 0.7
+                }
+            },
+            {
+                "identifier": "results_gng_p",
+                "type": "instruction",
+                "title": "Thank you for completing the task!",
+                "text": ""
+            }
+        ]
+    },
+    "resultTransforms": [
+        {
+            "transform": "GoNoGoSummary",
+            "inputMapping": [
+                {
+                    "stepIdentifier": "go_no_go_practice",
+                    "parameter": "GoNoGoResult"
+                }
+            ]
+        }
+    ]
+}

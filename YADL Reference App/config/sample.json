@@ -1,0 +1,33 @@
+{
+    "type": "recurring",
+    "identifier": "sampleOnboardingSurvey",
+    "title": "Onboarding Survey",
+    "guid": "onboarding_survey-1",
+    "activity": {
+        "type"      : "elementList",
+        "identifier": "sampleOnboardingSurvey",
+        "elements"   : [
+                        {
+                        "identifier":"question_1",
+                        "type":"multipleChoiceText",
+                        "text":"Did you eat breakfast?",
+                        "items": [
+                                  {
+                                  "prompt": "Yes at home",
+                                  "value": "yes at home"
+                                  },
+                                  {
+                                  "prompt": "Yes on campus",
+                                  "value": "yes on campus"
+                                  }
+                                  ]
+                        },
+                        {
+                        "identifier": "onboarding_finished",
+                        "type": "instruction",
+                        "title": "Thanks!"
+                        }
+                        ]
+    },
+    "resultTransforms": []
+}

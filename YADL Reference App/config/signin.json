@@ -1,0 +1,19 @@
+{
+    "type": "recurring",
+    "identifier": "login",
+    "title": "login",
+    "guid": "login-1",
+    "activity": {
+        "type"      : "elementList",
+        "identifier": "LS2Login",
+        "elements"   : [
+                        {
+                        "identifier": "LS2Login",
+                        "type": "LS2Login",
+                        "title": "Sign In",
+                        "text": ""
+                        }
+                        ]
+    },
+    "resultTransforms": []
+}

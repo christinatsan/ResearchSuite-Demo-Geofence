@@ -1,0 +1,99 @@
+{
+    "type": "recurring",
+    "identifier": "yadl_full",
+    "title": "YADL Full Intake Survey",
+    "guid": "yadl_full-1",
+    "activity": {
+        "type": "elementList",
+        "identifier": "yadl_full_assessment",
+        "optional": false,
+        "elements": [
+            {
+                "identifier": "introduction",
+                "type": "instruction",
+                "title": "Welcome to the YADL Full Assessment",
+                "text": "Please rate each activity as \nEasy, Moderate, or Hard"
+            },
+            {
+                "identifier": "yadl_full",
+                "type": "YADLFullAssessment",
+                "text": "Over the past week, how difficult was this activity for you?",
+                "choices": [
+                    {
+                        "text": "Easy",
+                        "value": "easy",
+                        "color": "#258313"
+                    },
+                    {
+                        "text": "Moderate",
+                        "value": "moderate",
+                        "color": "#F0743E"
+                    },
+                    {
+                        "text": "Hard",
+                        "value": "hard",
+                        "color": "#D20005"
+                    }
+                ],
+                "imageExtension": "png",
+                "items": [
+                    {
+                        "imageTitle": "BedToChair",
+                        "description": "Bed To Chair",
+                        "identifier": "BedToChair"
+                    },
+                    {
+                        "imageTitle": "Dressing",
+                        "description": "Dressing",
+                        "identifier": "Dressing"
+                    },
+                    {
+                        "imageTitle": "Housework",
+                        "description": "Housework",
+                        "identifier": "Housework"
+                    },
+                    {
+                        "imageTitle": "Lifting",
+                        "description": "Lift 10-pounds",
+                        "identifier": "Lifting"
+                    },
+                    {
+                        "imageTitle": "Shopping",
+                        "description": "Shopping",
+                        "identifier": "Shopping"
+                    },
+                    {
+                        "imageTitle": "ShortWalk",
+                        "description": "Talking a short walk",
+                        "identifier": "ShortWalk"
+                    },
+                    {
+                        "imageTitle": "WalkingUpStairs",
+                        "description": "Climbing Stairs",
+                        "identifier": "WalkingUpStairs"
+                    }
+                ]
+            }
+        ]
+    },
+    "resultTransforms": [
+        {
+            "transform": "YADLFullRaw",
+            "inputMapping": [
+                {
+                    "stepIdentifierRegex":"yadl_full.",
+                    "parameter":"results"
+                },
+                {
+                    "parameter": "schemaID",
+                    "constant": {
+                        "namespace": "Cornell",
+                        "name": "yadl-full-assessment-dance",
+                        "version": "1.0.0"
+                    }
+                }
+                
+            ]
+        }
+    ]
+}

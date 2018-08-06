@@ -1,0 +1,25 @@
+{
+    "type": "recurring",
+    "identifier": "location_survey",
+    "title": "Location Survey",
+    "guid": "location_survey-1",
+    "activity": {
+        "type"      : "elementList",
+        "identifier": "location_onboarding",
+        "elements"   : [
+                        {
+                        "identifier": "home_location_step",
+                        "type": "location",
+                        "title": "Home Location",
+                        "text": "Please enter your home location"
+                        },
+                        {
+                        "identifier": "work_location_step",
+                        "type": "location",
+                        "title": "Work Location",
+                        "text": "Please enter your work location"
+                        },
+                        ]
+    },
+    "resultTransforms": []
+}

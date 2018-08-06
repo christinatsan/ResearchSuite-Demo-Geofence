@@ -1,0 +1,59 @@
+{
+    "type": "recurring",
+    "identifier": "demographics",
+    "title": "Demographics",
+    "guid": "demographics",
+    "activity": {
+        "type": "elementList",
+        "identifier": "demographics_list",
+        "elements": [
+            {
+                "identifier": "introduction",
+                "type": "instruction",
+                "title": "Welcome to the Productivity Assessment"
+            },
+            {
+                     "identifier": "productivity",
+                     "type": "singleChoiceText",
+                     "text": "How will you rate your productivity today?",
+                     "items": [
+                               {
+                               "prompt": "Not productive at all",
+                               "value": "not productive at all"
+                               },
+                               {
+                               "prompt": "Somewhat productive",
+                               "value": "somewhat productive"
+                               },
+                               {
+                               "prompt":"Undecided",
+                               "value": "undecided"
+                               },
+                               {
+                               "prompt": "Productive",
+                               "value": "productive"
+                               },
+                               {
+                               "prompt": "Very productive",
+                               "value": "very productive"
+                               }
+                            ]
+            },
+            {
+                "identifier": "how was your day today",
+                "type": "textfield",
+                "text": "How was your day today?"
+            },
+            {
+                "identifier": "results",
+                "type": "instruction",
+                "title": "Thanks!",
+                "text": ""
+            }
+                     
+        ]
+    },
+    "resultTransforms": [
+
+    ]
+}

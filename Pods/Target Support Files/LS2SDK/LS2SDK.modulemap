@@ -1,0 +1,6 @@
+framework module LS2SDK {
+  umbrella header "LS2SDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
